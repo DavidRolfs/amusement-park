@@ -1,15 +1,16 @@
 $(document).ready(function(){
-  $("form#height").submit(function(){
+  $("form#height").submit(function(event){
+    event.preventDefault();
     //alert("submit works")
     var heightInput = parseInt($("#heightInput").val());
     //alert(heightInput)
 
-    if(heightInput > 40){
-      alert("You are tall enough to ride!!");
+    if(heightInput > 60){
+      $("#tall").show();
+    }else if(heightInput > 40){
+      $("#medium").show();
     }else{
-      alert("sorry you are not tall enough");
+      $("#small").show();
     }
-
-
   });
 });
