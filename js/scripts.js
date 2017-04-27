@@ -9,8 +9,10 @@ $(document).ready(function(){
       $("#tall").show();
     }else if(heightInput > 40){
       $("#medium").show();
-    }else{
+    }else if(heightInput <=40){
       $("#small").show();
+    }else{
+      alert("please enter a number")
     }
   });
 });
